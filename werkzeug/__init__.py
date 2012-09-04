@@ -133,17 +133,17 @@ class module(ModuleType):
         return result
 
 # keep a reference to this module so that it's not garbage collected
-old_module = sys.modules['werkzeug']
+#old_module = sys.modules['werkzeug']
 
 
 # setup the new module and patch it into the dict of loaded modules
-new_module = sys.modules['werkzeug'] = module('werkzeug')
-new_module.__dict__.update({
-    '__file__':         __file__,
-    '__package__':      'werkzeug',
-    '__path__':         __path__,
-    '__doc__':          __doc__,
-    '__version__':      __version__,
-    '__all__':          tuple(object_origins) + tuple(attribute_modules),
-    '__docformat__':    'restructuredtext en'
-})
+#new_module = sys.modules['werkzeug'] = module('werkzeug')
+#new_module.__dict__.update({
+#    '__file__':         __file__,
+#    '__package__':      'werkzeug',
+#    '__path__':         __path__,
+#    '__doc__':          __doc__,
+#    '__version__':      __version__,
+#    '__all__':          tuple(object_origins) + tuple(attribute_modules),
+#    '__docformat__':    'restructuredtext en'
+#})
